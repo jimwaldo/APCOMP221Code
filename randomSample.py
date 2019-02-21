@@ -4,7 +4,9 @@
 Created on 2019-02-18
 
 @author waldo
-
+Get a random sample of lines of a specified size from a csv file, and write those lines to a new
+file. The output file may not include as many lines as specified if the original file is exhausted
+before the maximum number is reached. Currently this picks about 1 out of every 10 lines.
 """
 
 import random, sys, csv

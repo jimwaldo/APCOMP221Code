@@ -5,6 +5,9 @@ Created on 2019-02-18
 
 @author waldo
 
+Extract a set of columns from a csv file. Takes as input a csv file to read, the csv file to write,
+and a configuration file that contains the indexes of the columns to extract from the file being
+read and written to the file being written.
 """
 import sys, csv
 import readConfigFile as rcf
