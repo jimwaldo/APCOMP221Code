@@ -4,7 +4,8 @@
 Created on 2019-02-18
 
 @author waldo
-Get a random sample of lines of a specified size from a csv file, and write those lines to a new
+Get a random sample of lines of a specified size from a csv file, and write those lines a random
+number of times, up to 25, to a new
 file. The output file may not include as many lines as specified if the original file is exhausted
 before the maximum number is reached. Currently this picks about 1 out of every 10 lines.
 """
@@ -30,7 +31,12 @@ if __name__ == '__main__':
     i = 0
     for l in csv_in:
         if (random.randint(1,10) == 7):
-            csv_out.writerow(l)
+            l.remove(l[2])
+            n = random.randint(1,25)
+            j = 0
+            while j < n:
+                csv_out.writerow(l)
+                j += 1
             i += 1
         if i >= end_count:
             break
