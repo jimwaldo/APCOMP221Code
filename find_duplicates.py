@@ -17,7 +17,7 @@ def find_dups(csv_in, csv_out):
 
     for l in csv_in:
         total_lines += 1
-        key = get_ket(l)
+        key = get_key(l)
         if key not in lines_seen:
             lines_seen.add(key)
             csv_out.writerow(l)
